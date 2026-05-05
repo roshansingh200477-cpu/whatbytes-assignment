@@ -2,7 +2,6 @@
 
 import { useCart } from "@/context/CartContext";
 import { Star } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCard({ product }) {
@@ -12,12 +11,11 @@ export default function ProductCard({ product }) {
     <div className="bg-white rounded-lg p-4 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow">
 
       <Link href={`/product/${product.id}`}>
-        <div className="relative w-full h-48 cursor-pointer">
-          <Image
+        <div className="w-full h-48 cursor-pointer flex items-center justify-center">
+          <img
             src={product.image}
             alt={product.name}
-            fill
-            className="object-contain"
+            className="h-full object-contain"
           />
         </div>
       </Link>
@@ -45,10 +43,11 @@ export default function ProductCard({ product }) {
       <p className="text-gray-900 font-bold text-lg">${product.price}</p>
 
       <button
-        onClick={() => addToCart(product)}
-        className="bg-blue-600 text-white text-sm py-2 rounded-md hover:bg-blue-700 transition-colors"
-      >
-        Add to Cart
+          onClick={() => addToCart(product)}
+          suppressHydrationWarning
+          className="bg-blue-600 text-white text-sm py-2 rounded-md hover:bg-blue-700 transition-colors"
+        >
+          Add to Cart
       </button>
 
     </div>
