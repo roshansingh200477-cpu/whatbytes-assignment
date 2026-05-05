@@ -1,13 +1,3 @@
-const createPlaceholder = (text, color) =>
-  `data:image/svg+xml,${encodeURIComponent(`
-    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
-      <rect width="300" height="300" fill="${color}"/>
-      <text x="150" y="150" font-family="Arial" font-size="20" 
-        fill="white" text-anchor="middle" dominant-baseline="middle"
-        font-weight="bold">${text}</text>
-    </svg>
-  `)}`;
-
 const products = [
   {
     id: 1,
@@ -16,7 +6,7 @@ const products = [
     category: "Clothing",
     brand: "Nike",
     rating: 4,
-    image: createPlaceholder("Running Shoes", "#3b82f6"),
+    image: "/images/running_shoes.jpg",
     description: "Lightweight and comfortable running shoes perfect for daily use and marathon training.",
   },
   {
@@ -26,7 +16,7 @@ const products = [
     category: "Electronics",
     brand: "Sony",
     rating: 5,
-    image: createPlaceholder("Headphones", "#8b5cf6"),
+    image: "/images/wireless_heaphones.jpeg",
     description: "Premium wireless headphones with noise cancellation and 30 hour battery life.",
   },
   {
@@ -36,7 +26,7 @@ const products = [
     category: "Clothing",
     brand: "Adidas",
     rating: 4,
-    image: createPlaceholder("Backpack", "#10b981"),
+    image: "/images/Backpack.jpeg",
     description: "Spacious and durable backpack with multiple compartments for everyday use.",
   },
   {
@@ -46,7 +36,7 @@ const products = [
     category: "Electronics",
     brand: "Apple",
     rating: 5,
-    image: createPlaceholder("Smartwatch", "#f59e0b"),
+    image: "/images/smartwatch.jpeg",
     description: "Feature packed smartwatch with health tracking GPS and always on display.",
   },
   {
@@ -56,7 +46,7 @@ const products = [
     category: "Clothing",
     brand: "Rayban",
     rating: 4,
-    image: createPlaceholder("Sunglasses", "#ec4899"),
+    image: "/images/sunglasses.jpeg",
     description: "Stylish UV protected sunglasses suitable for all face shapes and outdoor activities.",
   },
   {
@@ -66,7 +56,7 @@ const products = [
     category: "Electronics",
     brand: "Canon",
     rating: 4,
-    image: createPlaceholder("Digital Camera", "#ef4444"),
+    image: "/images/digital_camera.jpeg",
     description: "High resolution digital camera with 4K video recording and optical image stabilization.",
   },
   {
@@ -76,7 +66,7 @@ const products = [
     category: "Clothing",
     brand: "HM",
     rating: 3,
-    image: createPlaceholder("T-Shirt", "#06b6d4"),
+    image: "/images/t_shirt.jpeg",
     description: "Soft and breathable cotton t-shirt available in multiple colors and sizes.",
   },
   {
@@ -86,7 +76,7 @@ const products = [
     category: "Electronics",
     brand: "Samsung",
     rating: 4,
-    image: createPlaceholder("Smartphone", "#6366f1"),
+    image: "/images/smartphone.jpeg",
     description: "Latest smartphone with triple camera setup 5G connectivity and all day battery life.",
   },
   {
@@ -96,7 +86,7 @@ const products = [
     category: "Home",
     brand: "Ikea",
     rating: 4,
-    image: createPlaceholder("Coffee Table", "#84cc16"),
+    image: "/images/coffee_table.jpeg",
     description: "Modern minimalist coffee table made from solid wood with a matte finish.",
   },
   {
@@ -106,7 +96,7 @@ const products = [
     category: "Home",
     brand: "Philips",
     rating: 4,
-    image: createPlaceholder("Desk Lamp", "#f97316"),
+    image: "/images/desk_lamp.jpeg",
     description: "LED desk lamp with adjustable brightness and color temperature for comfortable reading.",
   },
 ];
